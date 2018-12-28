@@ -1,7 +1,8 @@
 import time
+import typing
 
 
-def timeit(func):
+def timeit(func: typing.Callable) -> typing.Callable:
     def timed(*args, **kw):
         start = time.time()
         result = func(*args, **kw)
